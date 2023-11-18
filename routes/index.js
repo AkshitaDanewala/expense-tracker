@@ -248,9 +248,9 @@ router.post('/editdata/:id', async function(req, res, next) {
   
   router.post('/search', async function(req, res, next) {
 try{
-  const finddata = await  expensedata.findOne({search: req.body.category, search: req.body.Expensename,search: req.body.month, search: req.body.amount })
-  // res.json(finddata);
-res.render("search", {data: finddata})
+  const finddata = await  expensedata.findOne({category: req.body.category })
+  res.json(finddata);
+res.render('search')
 }catch(err){
   res.send(err)
 }

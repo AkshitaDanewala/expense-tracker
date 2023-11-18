@@ -1,7 +1,6 @@
 
 
 
-
 <style>
     *{
         margin: 0;
@@ -23,6 +22,32 @@
         padding: 0 2vmax;
     }
     
+    .fullpg{
+        height: 25vh;
+        width: 50vw;
+    background-color:rgb(239, 236, 236);
+        position: absolute;
+        top: -50%;
+        right: 0%;
+        transition: all ease 1s;
+        z-index: 999;
+    }
+    .fullpg >ul{
+        display: block;
+        margin: 2vmax auto;
+    }
+    .fullpg >ul a{
+        font-size: 2.3vmax;
+        display: block;
+        margin: 2vmax 7vmax;
+    
+    }
+    .fullpg >h3 .close{
+        font-size: 2vmax;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
     .sitename{
         height: 11vh;
         width: 18vw;
@@ -54,12 +79,64 @@
         font-weight: bold;
         
     }
-    .logoutbtn{
+    .loginbtn{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.7vmax;
         text-decoration: none;
         font-weight: bold;
     }
+    .menubox{
+        height: 7vh;
+        width: 13vw;
+        /* border: 2px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    @media(max-width: 600px){
+        .sitename{
+            height: 7vh;
+        width: 50vw;
+        }
+        .logo{
+        height: 5vh;
+        width: 11vw;
+    }
+    
+    .sitename >h1{
+        font-size: 2.3vmax;
+        
+    }
+    ul{
+        display: none;
+    }
+    
+    .menubox{
+        height: 7vh;
+        width: 30vw;
+        /* border: 2px solid black; */
+    }
+    .menu{
+        display: initial;
+    }
+    
+    .loginbtn{
+        font-size: 2.5vmax;
+        font-weight: bold;
+    }
+    
+    .fullpg >h3 .close{
+        font-size: 3vmax;
+       
+    }
+    }
+    
+    
     
     </style>
     
@@ -67,21 +144,39 @@
     
     
     
-    <nav>
-    <div class="sitename">
-        <div class="logo"></div>
-        <h1>Expense Tracker</h1>
-    </div>
-       
-        <ul>
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/Dashboard">Dashboard</a>
-            <a href="/expenses">Expenses</a>
-
-        </ul>
     
-        
-        <a href="/login" class="logoutbtn">LOGOUT</a>
+    <nav>
+        <div class="fullpg">
+     <ul>
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/Dashboard">Dashboard</a>
+                <a href="/expenses">Expenses</a>
+            </ul>
+            <h3><i class="ri-close-line close"></i></h3>
+        </div>
+    
+    
+            <div class="sitename">
+                <div class="logo"></div>
+                <h1>Expense Tracker</h1>
+            </div>
+               
+                <ul>
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/Dashboard">Dashboard</a>
+                    <a href="/expenses">Expenses</a>
+                </ul>
+            
+                <div class="menubox">
+                    <h2><i class="ri-menu-line menu"></i></h2>
+                    <a href="/login" class="loginbtn">LOGOUT</a>
+                </div>
+      
+    
+       
     
     </nav>
+    
+    <script src="/javascripts/nav.js"></script>

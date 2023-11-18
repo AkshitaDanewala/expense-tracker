@@ -83,39 +83,5 @@ font-weight: bold;
 color: darkblue;
 }
 
-@media(max-width: 600px){
 
 
-    .loginpg >form{
-        height: 30vh;
-        width: 100vw;
-    }
-
-    .loginpg> h1{
-        font-size: 3.5vmax;
-    }
-
-
-    input{
-        height: 6vh;
-        width: 30vw;
-        border: 1px solid grey;
-        border-radius: 0.5vmax;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 2vmax;
-        margin: 1vmax;
-        padding: 0 2vmax;
-    }
-
-    form >h3{
-        font-size: 2.5vmax;
-        }
-
-        .forgotbtn{
-            margin-top: 3vmax;
-            }
-
-            .changebtn{
-                margin-top: 2.5vmax;
-            }
-}

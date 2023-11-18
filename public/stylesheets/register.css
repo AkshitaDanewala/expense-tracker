@@ -62,30 +62,3 @@ form >button{
 }
 
 
-
-@media(max-width:600px){
-
-    form{
-        height: 20vh;
-        width: 45vw;
-    }
-
-    form >h1{
-        font-size: 3vmax;
-        margin-bottom: 1vmax;
-        }
-
-        input{
-            height: 6vh;
-            width: 35vw;
-            font-size: 2.3vmax;
-          
-        }
-
-        form >button{
-            padding: 1.5vmax 2vmax;
-            margin-top: 1vmax;
-            font-size: 2.5vmax;
-        }
-        
-}

@@ -72,11 +72,11 @@ button{
     
     .expenseformpg >h1{
         font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 2vmax;
+        margin-bottom: 3vmax;
     }
     form{
         height: 40vh;
-        width: 60vw;
+        width: 100vw;
     }
     input{
         height: 3vh;
