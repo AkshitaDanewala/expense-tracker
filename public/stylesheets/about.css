@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.pg1{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(228, 226, 226);
+}
+.pg1-head{
+    height: 13vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+hr{
+    border: 1px solid black;
+}
+.pg1-head >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vmax;
+}
+
+.pg1-head >p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+}
+
+.contentbox{
+    height: 80vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 2vmax;
+    margin-top: 1vmax;
+}
+
+.contentbox >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vmax;
+}
+
+.contentbox >p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    width: 25vw;
+}
+
+.circleboxcontent{
+    height: 60vh;
+    width: 30vw;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.circlebox1,.circlebox2, .circlebox3, .circlebox4   {
+    height: 10vh;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+align-items: center;
+padding: 0 2vmax;
+}
+
+.circle1, .circle2, .circle3, .circle4{
+    height: 10vh;
+    width: 5vw;
+    border-radius: 10vmax;
+    display: flex;
+    align-items: center;
+}
+
+
+.circle1{
+    border: 5px solid red;
+}
+.circle2{
+    border: 5px solid blue;
+}
+
+.circle3{
+    border: 5px solid green;
+
+}
+.circle4{
+    border: 5px solid coral;
+
+}
+
+.circlebox1 >h3, .circlebox2 >h3, .circlebox3 >h3, .circlebox4 >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8vmax;
+    margin-left: 3vmax;
+}
+/* ----------------------------------------------------------------------------- */
+
+
+.pg2{
+    height: 65vh;
+    width: 100%;
+    background-color: lightblue;
+    padding: 2vmax 0 ;
+}
+.pg2 >h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vmax;
+}
+
+.boxes{
+    height: 50vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1vmax;
+}
+
+
+.box1, .box2, .box3, .box4, .box5{
+    height: 32vh;
+    width: 18vw;
+    /* border: 2px solid black; */
+    box-shadow: 0 0 6px grey;
+    padding: 1vmax 0.3vmax;
+
+}
+.box>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+    text-align: center;
+}
+
+.box>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    margin-top: 1vmax;
+    text-align: center;
+}
+
+
+@media(max-width:600px){
+
+    .pg1{
+        height: 130vh;
+    }
+    .pg1-head >h1{
+        margin-top: 2vmax;
+        font-size: 5vmax;
+    }
+
+    .pg1-head >p{
+        font-size: 1.6vmax;
+        width: 100vw;
+    }
+
+    .contentbox{
+        display: initial;
+    }
+
+    .contentbox >h1{
+        margin-left: 11vmax;
+
+    }
+
+    .contentbox >p{
+        margin-top: 2vmax;
+        font-size: 1.6vmax;
+        margin-left: 6vmax;
+    width: 75vw;
+
+    }
+    .circleboxcontent{
+        width: 80vw;
+        margin-left: 5vmax;
+        margin-top: 2vmax;
+    }
+
+    .circle1, .circle2, .circle3, .circle4{
+        width: 20vw;
+    }
+    .circle1 >h1, .circle2 >h1, .circle3 >h1, .circle4 >h1{
+        margin-left: 1vmax;
+    }
+
+    .circlebox1 >h3, .circlebox2 >h3, .circlebox3 >h3, .circlebox4 >h3{
+        font-size: 2.6vmax;
+    }
+
+    .pg2{
+        height: 120vh;
+        width: 100%;
+    }
+
+    .pg2 >h1{
+        margin: 1vmax;
+        font-size: 3vmax;
+    }
+
+    .boxes{
+        display: initial;
+    }
+
+    .box1, .box2, .box3, .box4, .box5{
+        width: 43vw;
+        height: 18vh;
+        margin: 3vmax auto;
+        background-color: black;
+        color: white;
+
+    }
+
+    .box>h2{
+        font-size: 2vmax;
+        margin-top: 1vmax;
+    }
+    .box >p{
+        margin-top: 1vmax;
+        font-size: 1.5vmax;
+    }
+}
+
+
+
+

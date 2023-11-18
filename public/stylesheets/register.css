@@ -1,0 +1,91 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.registerpg{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(10, 10, 93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    height: 70vh;
+    width: 30vw;
+    background-color: white;
+    border-radius: 1vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+form >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vmax;
+    margin-bottom: 1vmax;
+    }
+input{
+    height: 8vh;
+    width: 20vw;
+    border: 1px solid grey;
+    border-radius: 0.5vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    margin: 1vmax;
+    padding: 0 2vmax;
+}
+
+form >button{
+    background-color:yellowgreen;
+    padding: 0.6vmax 1.6vmax;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 0.5vmax;
+    margin-top: 1vmax;
+    border: none;
+    font-size: 1.4vmax;
+}
+
+
+
+@media(max-width:600px){
+
+    form{
+        height: 20vh;
+        width: 45vw;
+    }
+
+    form >h1{
+        font-size: 3vmax;
+        margin-bottom: 1vmax;
+        }
+
+        input{
+            height: 6vh;
+            width: 35vw;
+            font-size: 2.3vmax;
+          
+        }
+
+        form >button{
+            padding: 1.5vmax 2vmax;
+            margin-top: 1vmax;
+            font-size: 2.5vmax;
+        }
+        
+}

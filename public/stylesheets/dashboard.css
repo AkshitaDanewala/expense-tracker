@@ -1,0 +1,139 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.dashboardpg{
+    height: 170vh;
+    width: 100%;
+    /* background-color: rgb(193, 195, 195); */
+    background-color: lightblue;
+}
+
+.dashboardpg >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3vmax;
+    text-align: center;
+    padding-top: 2vmax;
+}
+
+.btnbox{
+    height: 12vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0 3vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1vmax;
+}
+
+.btnbox >a{
+    padding: 1vmax 2vmax;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0.5vmax;
+    text-decoration: none;
+}
+
+form >input{
+    height: 6vh;
+    width: 25vw;
+    border-radius: 0.5vmax;
+    font-size: 1.3vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 2vmax;
+    border: 1px solid grey;
+    outline: none;
+}
+
+
+
+hr{
+    border: 1px solid black;
+}
+
+.expensebox{
+    height: 142vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    margin-top: 1vmax;
+    padding: 0vmax 1vmax;
+}
+
+.expensebox >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+}
+.card1{
+    height: 39vh;
+    width: 22vw;
+    background-color: white;
+    border-radius: 1vmax;
+padding: 1vmax 2vmax;
+display: inline-block;
+margin-left: 1.5vmax;
+margin-top: 1.5vmax;
+
+}
+
+.card1 >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.8vmax 0;
+}
+.editbtn, .deletebtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    font-weight: bold;
+   margin: 2vmax;
+}
+
+span{
+    color: crimson;
+}
+
+
+@media(max-width: 600px){
+
+    .dashboardpg{
+        height: 350vh;
+    }
+    .dashboardpg >h1{
+        font-size: 4vmax;
+    }
+
+    .btnbox >a{
+        padding: 1.4vmax 2vmax;
+        margin-left: -1vmax;
+    }
+
+    form >input{
+        font-size: 1.4vmax;
+        width: 50vw;
+        height: 5vh;
+        
+    }
+
+    .card1{
+        display: block;
+        margin:  2vmax auto;
+        height: 25vh;
+        width: 72vw;
+    }
+
+    .editbtn, .deletebtn{
+        font-size: 3vmax;
+   margin:  2vmax 3vmax;
+
+    }
+}

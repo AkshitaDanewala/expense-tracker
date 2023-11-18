@@ -1,0 +1,88 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+
+.pg1{
+  height: 88vh;
+  width: 100%;
+  background-color: black;
+  /* background-image: url("https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+  background-image: url("https://media.istockphoto.com/id/1294923474/photo/man-in-white-suit.jpg?s=612x612&w=0&k=20&c=Ku0XVfm0QJYt0FzLb-jjiSMWaRPW8-FYyvOs1WQ-ozs=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.overlay >h1{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 4vmax;
+/* color: white; */
+margin-top: 10vmax;
+}
+
+.overlay >p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3vmax;
+  width: 50vw;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 1vmax;
+  }
+
+  .overlay a{
+    padding: 1vmax 1vmax;
+    border-radius: 0.5vmax;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1vmax;
+  }
+
+  .overlay a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+
+
+  @media(max-width:600px){
+
+    .overlay >h1{
+      font-size:5vmax;
+      margin-top: 20vmax;
+    }
+    .overlay >p{
+      width: 90vw;
+      font-size: 1.5vmax;
+      margin-top: 2vmax;
+    }
+    .overlay a{
+      margin-top: 2vmax;
+      padding: 1.4vmax 1.3vmax;
+    }
+  }
+
+
+  

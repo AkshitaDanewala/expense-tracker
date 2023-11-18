@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" href="/stylesheets/expensesform.css">
+
+<div class="expenseformpg">
+<h1>ADD EXPENSE</h1>
+
+    <form action="/editdata/<%= edit._id%>" method="post">
+<h4>Expense Name:</h4>
+<input type="text" name="Expensename" value="<%= edit.Expensename%>">
+<h4>Amount:</h4>
+<input type="number" name="amount" value="<%= edit.amount%>">
+<h4>Date:</h4>
+<input type="datetime" name="date" value="<%= edit.date%>">
+<h4>Category:</h4>
+<input type="text" name="category" value="<%= edit.category%>">
+<button> CONFIRM EDIT</button>
+    </form>
+</div>

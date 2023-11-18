@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%
+}
+
+.expenseformpg{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(231, 225, 225);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.expenseformpg >h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    height: 90vh;
+    width: 40vw;
+    background-color: white;
+    border-radius: 1vmax;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    /* justify-content: center; */
+    padding: 2vmax 2vmax;
+}
+
+form >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vmax;
+
+}
+input{
+    height: 8vh;
+    width: 25vw;
+border-radius: 0.5vmax;
+border: 1px solid grey;
+margin: 1vmax;
+outline: none;
+padding: 0 2vmax;
+font-size: 1.3vmax;
+}
+form >h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    color: darkblue;
+    margin-left: 1vmax;
+}
+
+button{
+    padding: 0.7vmax 1vmax;
+    color: white;
+    font-size: 1.4vmax;
+    background-color: darkblue;
+    border-radius: 0.5vmax;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+    border: none;
+}
+
+@media(max-width: 600px){
+    
+    .expenseformpg >h1{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 2vmax;
+    }
+    form{
+        height: 40vh;
+        width: 60vw;
+    }
+    input{
+        height: 3vh;
+        width: 40vw;
+    }
+
+    form >h4{
+        font-size: 2.3vmax;
+    }
+
+    button{
+        padding: 1vmax 1.4vmax;
+        color: white;
+        font-size: 2vmax;
+        background-color: darkblue;
+        border-radius: 0.5vmax;
+        margin-left: 1vmax;
+        margin-top: 1vmax;
+        border: none;
+    }
+}

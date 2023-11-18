@@ -1,0 +1,13 @@
+
+<%- include("partials/nav2")%>
+<%- include("partials/header")%>
+
+<link rel="stylesheet" href="/stylesheets/forgot.css">
+<div class="pg1">
+    <form action="/matchOtp/<%= email%>" method="post">
+        <input type="number" name="otp" placeholder="Enter Otp">
+        <button>Confirm</button>
+    </form>
+</div>
+
+<%- include("partials/footer")%>

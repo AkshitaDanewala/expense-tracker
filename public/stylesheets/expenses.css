@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.pg1{
+    height: 88vh;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.totalexp{
+    height: 9vh;
+    width: 35vw;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+ .totalamt{
+    height: 9vh;
+    width: 34vw;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1vmax;
+}
+
+.expbox, .amtbox{
+    height: 7vh;
+    width: 10vw;
+    border: 2px solid black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.4vmax;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.totalexp >h3, .totalamt >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+}
+
+
+@media(max-width: 600px){
+    .totalexp, .totalamt{
+        height: 8vh;
+    width: 95vw;
+    margin: 1vmax 0;
+    }
+
+    .totalexp >h3, .totalamt >h3{
+        font-size: 2.7vmax;
+    }
+
+    .expbox, .amtbox{
+        margin-left: 1vmax;
+        width: 25vw;
+font-size: 2vmax;
+height: 5vh;
+
+    }
+}

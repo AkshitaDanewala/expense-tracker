@@ -1,0 +1,78 @@
+<%- include("partials/nav2")%>
+<%- include("partials/header")%>
+
+<link rel="stylesheet" href="/stylesheets/dashboard.css">
+<div class="dashboardpg">
+
+<h1>Your Expenses</h1>
+<div class="btnbox">
+
+   <a href="/expensesform">ADD EXPENSES</a>
+  
+   <form action="/search" method="post">
+    <input type="search" name="search"  placeholder="Type here to Search Expenses..">
+
+
+   </form>
+</div>
+
+<hr>
+
+
+<div class="expensebox">
+<%if(data.length === 0){%>
+
+    <h1>No expenses yet:</h1>
+<%} else{%>
+
+    <% data.forEach(function(user){ %>
+
+        <div class="card1">
+    
+            <h3><span>Name:</span> &nbsp;  &nbsp;<%= user.Expensename%></h3>
+            <h3> <span>Amount:</span>  &nbsp;  &nbsp;<%= user.amount%></h3> 
+          <h3><span>Date:</span>  &nbsp;  &nbsp;<%= user.date%>   </h3>
+          <h3><span> Category: </span>  &nbsp;  &nbsp;<%= user.category%></h3>
+          <h3><span> Month: </span>  &nbsp;  &nbsp;<%= user.month%></h3>
+          <a href="/editdata/<%= user._id%>" class="editbtn">Edit</a>
+             <a href="/delete/<%= user._id%>" class="deletebtn">Delete</a>
+         </div>
+    
+    
+    <%})%>
+
+
+
+
+<%}%>
+    
+
+
+
+
+
+
+        
+
+
+   
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/javascripts/dashboard.js"></script>
+
+<%- include("partials/footer")%>

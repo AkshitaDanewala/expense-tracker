@@ -1,0 +1,31 @@
+
+<%- include("partials/nav2")%>
+
+<link rel="stylesheet" href="/stylesheets/searchpg.css">
+
+<div class="pg1">
+
+
+
+    <div class="card1">
+
+        <h3><span>Name:</span> &nbsp; &nbsp;<%= data.Expensename%></h3>
+        <h3> <span>Amount:</span> &nbsp; &nbsp;<%= data.amount%></h3> 
+      <h3><span>Date:</span> &nbsp; &nbsp;<%= data.date%>   </h3>
+      <h3><span> Category: </span> &nbsp; &nbsp;<%= data.category%></h3>
+      <a href="/editdata/<%= data._id%>" class="editbtn">Edit</a>
+         <a href="/delete/<%= data._id%>" class="deletebtn">Delete</a>
+     </div>
+
+
+
+        
+    
+
+
+
+</div>
+
+   
+
+        
