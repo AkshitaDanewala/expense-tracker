@@ -246,6 +246,7 @@ router.post('/editdata/:id', async function(req, res, next) {
   });
   
   
+  
   router.post('/search', async function(req, res, next) {
 try{
   const finddata = await  expensedata.findOne({category: req.body.category })
@@ -255,24 +256,24 @@ res.render('search')
   res.send(err)
 }
   });
-  
 
 
-  // router.post('/search', async function(req, res, next) {
-  //   try{
-  //     const finddata = await  expensedata.find()
-  //     var find
-  //     finddata.forEach(function(f){
-  //    if(f.user.toString() == req.user.id){
-  //     find =  f.finddata.find({category: req.body.category})
-  //    }
-  //     })
-  //     // res.json(finddata);
-  //   res.render("search", {find, finddata})
-  //   }catch(err){
-  //     res.send(err)
-  //   }
-  //     });
+
+
+//   router.post('/search', async function(req, res, next) {
+//     try{
+//       const finddata = await req.user.expensedata.find()
+//       finddata.forEach(function(f){
+//         if(f.user == req.body.id){
+//           req.user.expensedata.find({category: req.body.category})
+//         }
+//       })
+// res.json(finddata)
+//     res.render("search")
+//     }catch(err){
+//       res.send(err)
+//     }
+//       });
       
 
 
@@ -297,7 +298,6 @@ try{
   data.forEach(function(d){
 if(d.user.toString()=== req.user.id){
   count+= d.amount
- 
 }
   })
   console.log(count)
