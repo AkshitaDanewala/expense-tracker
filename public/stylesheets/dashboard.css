@@ -11,7 +11,7 @@ html,body{
 }
 
 .dashboardpg{
-    height: 170vh;
+    height: 100vh;
     width: 100%;
     /* background-color: rgb(193, 195, 195); */
     background-color: lightblue;
@@ -64,11 +64,15 @@ hr{
 }
 
 .expensebox{
-    height: 142vh;
+    height: 72vh;
     width: 100%;
     /* border: 2px solid black; */
     margin-top: 1vmax;
     padding: 0vmax 1vmax;
+    overflow-y: auto;
+}
+.expensebox::-webkit-scrollbar{
+    display: none;
 }
 
 .expensebox >h1{
@@ -106,7 +110,7 @@ span{
 @media(max-width: 600px){
 
     .dashboardpg{
-        height: 350vh;
+        height: 94vh;
     }
     .dashboardpg >h1{
         font-size: 4vmax;

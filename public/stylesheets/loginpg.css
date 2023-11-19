@@ -85,5 +85,34 @@ color: darkblue;
 
 
 
+@media(max-width: 600px){
 
+    .loginpg> h1{
+      
+        font-size: 4vmax;
+        margin-bottom: 3vmax;
+    }
+
+    form{
+        height: 40vh;
+        width: 70vw;
+    }
+
+
+    input{
+        height: 5vh;
+        width: 55vw;
+        font-size: 2vmax;
+    }
+
+    form >button{
+        padding: 1.3vmax 2vmax;
+        font-size: 2vmax;
+        margin-top: 1vmax;
+    }
+
+    form >h3{
+        font-size: 1.6vmax;
+}
+}
 

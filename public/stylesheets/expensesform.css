@@ -75,12 +75,12 @@ button{
         margin-bottom: 3vmax;
     }
     form{
-        height: 40vh;
-        width: 100vw;
+        height: 60vh;
+        width: 80vw;
     }
     input{
-        height: 3vh;
-        width: 40vw;
+        height: 5vh;
+        width: 60vw;
     }
 
     form >h4{

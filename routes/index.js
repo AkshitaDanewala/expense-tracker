@@ -294,14 +294,16 @@ router.get('/expenses', isLoggedIn, async  function(req, res, next) {
 
 try{
   const data = await expensedata.find()
+  var totalexp = 0
   var count = 0
-  data.forEach(function(d){
-if(d.user.toString()=== req.user.id){
+  data.forEach(function(d, i){
+if(d.user.toString() === req.user.id){
   count+= d.amount
+  totalexp = i+1
 }
   })
   console.log(count)
-res.render("expenses", {count:count})
+res.render("expenses", {count:count, totalexp: totalexp})
 
 }catch(err){
   res.send(err)
