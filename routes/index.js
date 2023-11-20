@@ -312,4 +312,29 @@ res.render("expenses", {count:count, totalexp: totalexp})
 
 });
 
+
+
+
+// router.get('/expenses', isLoggedIn, async  function(req, res, next) {
+
+//   try{
+//     const data = await  req.user.populate("expensedata")
+// var count = 0
+// var totalexp
+// data.forEach(function(d,i){
+// totalexp = i+1
+//     count+= d.amount
+  
+
+// })
+//     console.log(count)
+//   res.render("expenses", {count:count, totalexp: totalexp, data:user.expensedata, email: user.email})
+  
+//   }catch(err){
+//     res.send(err)
+//   }
+  
+  
+//   });
+
 module.exports = router;
