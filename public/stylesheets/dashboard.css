@@ -72,7 +72,7 @@ form >input{
 .amtbox{
     height: 7vh;
     width: 10vw;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 font-family: Arial, Helvetica, sans-serif;
 font-size: 1.8vmax;
 font-weight: bold;
@@ -166,7 +166,7 @@ width: 40vw;
    
     .amtbox{
         height: 5vh;
-    font-size: 1.9vmax;
+    font-size: 2vmax;
     }
 
 
