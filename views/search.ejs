@@ -1,25 +1,32 @@
 
 <%- include("partials/nav2")%>
+<%- include("partials/header")%>
+
 
 <link rel="stylesheet" href="/stylesheets/searchpg.css">
 
 <div class="pg1">
 
-<!-- <% data.forEach(function(d){ %>
-
-    <div class="card1">
-
-        <h3><span>Name:</span> &nbsp; &nbsp;<%= d.Expensename%></h3>
-        <h3> <span>Amount:</span> &nbsp; &nbsp;<%= d.amount%></h3> 
-      <h3><span>Date:</span> &nbsp; &nbsp;<%= d.date%>   </h3>
-      <h3><span> Category: </span> &nbsp; &nbsp;<%= d.category%></h3>
-      <a href="/editdata/<%= data._id%>" class="editbtn">Edit</a>
-         <a href="/delete/<%= data._id%>" class="deletebtn">Delete</a>
-     </div>
+    <% search.forEach((s)=>{ %>
 
 
+        <div class="card1">
+    
+            <h3><span>Name:</span> &nbsp;  &nbsp;<%= s.Expensename%></h3>
+            <h3> <span>Amount:</span>  &nbsp;  &nbsp;<%=s.amount%></h3> 
+          <h3><span>Date:</span>  &nbsp;  &nbsp;<%= s.date%>   </h3>
+          <h3><span> Category: </span>  &nbsp;  &nbsp;<%= s.category%></h3>
+          <h3><span> Month: </span>  &nbsp;  &nbsp;<%= s.month%></h3>
+          <a href="/editdata/<%= s._id%>" class="editbtn">Edit</a>
+             <a href="/delete/<%= s._id%>" class="deletebtn">Delete</a>
+         </div>
 
-<%})%> -->
+    <%})%>
+
+
+    <%- include("partials/footer")%>
+
+
 
     
 

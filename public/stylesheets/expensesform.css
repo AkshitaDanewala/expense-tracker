@@ -19,12 +19,12 @@ align-items: center;
 justify-content: center;
 }
 
-.expenseformpg >h1{
+form >h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 form{
-    height: 90vh;
+    height: 95vh;
     width: 40vw;
     background-color: white;
     border-radius: 1vmax;
@@ -37,11 +37,12 @@ form{
 
 form >h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.4vmax;
+    font-size: 1.6vmax;
+    margin-left: 12vmax;
 
 }
 input{
-    height: 8vh;
+    height: 15vh;
     width: 25vw;
 border-radius: 0.5vmax;
 border: 1px solid grey;
@@ -55,6 +56,7 @@ form >h4{
     font-size: 1.3vmax;
     color: darkblue;
     margin-left: 1vmax;
+    margin-top: 0.4vmax;
 }
 
 button{
@@ -64,27 +66,29 @@ button{
     background-color: darkblue;
     border-radius: 0.5vmax;
     margin-left: 1vmax;
-    margin-top: 1vmax;
+    margin-top: 1.4vmax;
     border: none;
 }
 
 @media(max-width: 600px){
     
-    .expenseformpg >h1{
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 3vmax;
-    }
     form{
-        height: 60vh;
+        height: 65vh;
         width: 80vw;
+    }
+    form >h1{
+        font-size: 3vmax;
+        margin-left: 4vmax;
     }
     input{
         height: 5vh;
         width: 60vw;
+
     }
 
     form >h4{
         font-size: 2.3vmax;
+        margin-top: 1.5vmax;
     }
 
     button{

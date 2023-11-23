@@ -37,6 +37,7 @@ html,body{
 
 .btnbox >a{
     padding: 1vmax 2vmax;
+    width: 15vw;
     border: none;
     background-color: darkblue;
     color: white;
@@ -57,7 +58,33 @@ form >input{
     outline: none;
 }
 
+.totalamt{
+    height: 9vh;
+    width: 34vw;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
+
+
+.amtbox{
+    height: 7vh;
+    width: 10vw;
+    border: 2px solid black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.8vmax;
+font-weight: bold;
+border-radius: 0.5vmax;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+ .totalamt >h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+}
 
 hr{
     border: 1px solid black;
@@ -110,23 +137,38 @@ span{
 @media(max-width: 600px){
 
     .dashboardpg{
-        height: 94vh;
+        height: 98vh;
     }
     .dashboardpg >h1{
         font-size: 4vmax;
     }
 
+    .btnbox{
+        height: 15vh;
+        width: 100%;
+        padding: 0 1vmax;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1vmax;
+    }
     .btnbox >a{
-        padding: 1.4vmax 2vmax;
-        margin-left: -1vmax;
+        padding: 1.3vmax 2vmax;
+width: 40vw;
     }
 
-    form >input{
-        font-size: 1.4vmax;
-        width: 50vw;
-        height: 5vh;
-        
+
+    .totalamt{
+        height: 6vh;
+        width: 78vw;
+        margin-left: 1vmax;
     }
+   
+    .amtbox{
+        height: 5vh;
+    font-size: 1.9vmax;
+    }
+
 
     .card1{
         display: block;

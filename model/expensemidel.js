@@ -5,7 +5,6 @@ const expensedata = new mongoose.Schema({
     amount: Number,
     date: String,
     category: String,
-    number :Number,
     month: String,
     user: {type: mongoose.Schema.Types.ObjectId, ref: "collectionname"}
 },

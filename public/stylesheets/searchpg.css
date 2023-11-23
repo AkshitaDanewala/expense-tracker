@@ -20,10 +20,10 @@ html,body{
 
 .card1{
     height: 40vh;
-    width: 28vw;
+    width: 23vw;
     background-color: white;
     border-radius: 1vmax;
-    padding: 2vmax 3vmax;
+    padding: 1vmax 1vmax;
     margin: 0 1vmax;
 }
 
@@ -42,4 +42,22 @@ h3 >span{
     font-size: 1.3vmax;
     font-weight: bold;
    margin: 2vmax;
+}
+
+@media(max-width: 600px){
+    .pg1{
+        flex-direction: column;
+    }
+    .card1{
+        display: block;
+        margin:  2vmax auto;
+        height: 25vh;
+        width: 72vw;
+    }
+
+    .editbtn, .deletebtn{
+        font-size: 3vmax;
+   margin:  2vmax 3vmax;
+
+    }
 }
