@@ -16,15 +16,28 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1vmax 1vmax;
+
 }
 
+.cardbox{
+    height:85vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0 3vmax;
+    overflow-y: auto;
+}
+.cardbox::-webkit-scrollbar{
+display: none;
+}
 .card1{
-    height: 40vh;
+    height: 42vh;
     width: 23vw;
     background-color: white;
     border-radius: 1vmax;
     padding: 1vmax 1vmax;
-    margin: 0 1vmax;
+    margin: 1vmax 1vmax;
+    display: inline-block;
 }
 
 .card1 >h3{

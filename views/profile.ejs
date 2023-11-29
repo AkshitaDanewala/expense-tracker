@@ -1,0 +1,13 @@
+<%- include("partials/header")%>
+<!-- <%#- include("partials/nav2")%> -->
+
+
+<%= user.username%> <br><br>
+<%= user.email%> <br><br>
+<a href="/login">logout</a> <br> <br>
+<a href="/changepassword" class="changebtn">Change Password</a> <br> <br>
+<a href="/update">update Account</a> <br> <br>
+<a href="/deleteuser/<%= admin._id%>">DeleteAccount</a> <br>
+
+
+<%- include("partials/footer")%>

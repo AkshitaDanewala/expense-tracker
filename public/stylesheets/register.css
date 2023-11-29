@@ -60,7 +60,18 @@ form >button{
     border: none;
     font-size: 1.4vmax;
 }
+form h2{
+    margin-top: 1vmax;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+form a{
+    color: darkblue;
+    text-decoration: none;
+    margin-top: 1vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
 @media(max-width: 600px){
     form{

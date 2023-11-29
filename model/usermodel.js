@@ -4,6 +4,9 @@ const userdata = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
+    number: Number,
+    address: String,
+    location: String,
     forgotpasswordOtp :{
         type: Number,
         default: -1

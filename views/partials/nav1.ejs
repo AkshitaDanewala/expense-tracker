@@ -157,27 +157,44 @@ ul{
     </div>
 
 
+    
+
+
+
         <div class="sitename">
             <div class="logo"></div>
             <h1>Expense Tracker</h1>
         </div>
            
-            <ul>
-                <a href="/">Home</a>
-                <a href="/about">About Us</a>
-                <a href="/Dashboard">Dashboard</a>
-                <a href="/searchexpenses">Search Expenses</a>
+        <ul>
+        <% if(!admin){%>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/login">Dashboard</a>
+            <a href="/login">Search Expenses</a>
+        <%}else{%>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/Dashboard">Dashboard</a>
+            <a href="/searchexpenses">Search Expenses</a>
+  
+
+        <%}%>
+          
+               
             </ul>
         
             <div class="menubox">
+                <% if(!admin){%>
+                    <a href="/login">Login</a>
 
-                <h2><i class="ri-menu-line menu"></i></h2>
-
-
-                <a href="/login" class="loginbtn">LOGIN</a>
+               <% }else{%>
+                    <a href="/profile/<%= admin._id%>">Profile</a>
+                    <h2><i class="ri-menu-line menu"></i></h2>
+                <%}%>
+ 
+    
             </div>
-  
-
    
 
 </nav>

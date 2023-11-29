@@ -72,7 +72,7 @@ form >input{
 .amtbox{
     height: 7vh;
     width: 10vw;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 1.8vmax;
 font-weight: bold;
@@ -107,7 +107,7 @@ hr{
     font-size: 2vmax;
 }
 .card1{
-    height: 39vh;
+    height: 42vh;
     width: 22vw;
     background-color: white;
     border-radius: 1vmax;

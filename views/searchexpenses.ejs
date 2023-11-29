@@ -1,15 +1,30 @@
-<%- include("partials/nav2")%>
+<%- include("partials/nav1")%>
 <%- include("partials/header")%>
-<link rel="stylesheet" href="/stylesheets/expenses.css">
+<link rel="stylesheet" href="/stylesheets/searchexpenses.css">
 
 
 
 <div class="pg1">
 
 
-       <form action="/search" method="post">
+       <!-- #<form action="/search" method="post">
               <input type="search" name="search"  placeholder="Type here to Search Expenses..">
+             </form> -->
+
+             <form action="/filter" method=" Post">
+              <select name="key" id="">
+                     <option value="">Select Expenses</option>
+                     <option value="Expensename">Expensename</option>
+                     <option value="amount">Amount</option>
+                     <option value="month">Month</option>
+                     <option value="category">Category</option>
+                     <option value="paymentmode">Paymentmode</option>
+              </select> <br>
+    <input type="text" name="value" placeholder="Search Your Expenses Here..." /> <br>
+    <button>Filter</button>
+
              </form>
+
              </div>
 
 <script src="/javascripts/dashboard.js"></script>

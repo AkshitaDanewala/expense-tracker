@@ -8,13 +8,14 @@ passport.use(new LocalStrategy(Data.authenticate()));
 var nodemailer = require("nodemailer")
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index');
+router.get('/', async function (req, res, next) {
+res.render('index',{ admin: req.user});
+  
 });
 
 
 router.get('/register', function (req, res, next) {
-  res.render('register');
+  res.render('register', {admin: req.user});
 });
 
 
@@ -31,7 +32,7 @@ router.post('/register', async function (req, res, next) {
 
 
 router.get('/login', function (req, res, next) {
-  res.render('login');
+  res.render('login', {admin: req.user});
 });
 
 router.post('/login', passport.authenticate("local", {
@@ -53,7 +54,7 @@ function isLoggedIn(req, res, next) {
 
 
 router.get('/forgot', function (req, res, next) {
-  res.render('forgot');
+  res.render('forgot', {admin: req.user});
 });
 
 
@@ -113,7 +114,7 @@ function sendMail(req, res, user) {
 
 
 router.get('/matchOtp', function (req, res, next) {
-  res.render('matchOtp');
+  res.render('matchOtp', {admin: req.user});
 });
 
 
@@ -148,7 +149,7 @@ router.post('/resetpassword/:id', async function (req, res, next) {
 
 
 router.get('/changepassword', function (req, res, next) {
-  res.render('changepassword');
+  res.render('changepassword', {admin: req.user});
 });
 
 
@@ -172,16 +173,7 @@ router.get('/dashboard', isLoggedIn, async function (req, res, next) {
 
   try {
     const user = await req.user.populate("expensedata")
-    // console.log(user.expense)
-      const data = await expensedata.find()
-      var count = 0
-      data.forEach(function (d) {
-        if (d.user.toString() === req.user.id) {
-          count += d.amount
-        }
-      })
-      console.log(count)
-    res.render('dashboard', { data: user.expensedata, email: user.email, count: count });
+    res.render('dashboard', { data: user.expensedata, admin: req.user,email: user.email});
   } catch (err) {
     res.send(err)
   }
@@ -192,7 +184,7 @@ router.get('/dashboard', isLoggedIn, async function (req, res, next) {
 
 
 router.get('/expensesform', async function (req, res, next) {
-  res.render('expensesform');
+  res.render('expensesform', {admin: req.user});
 
 });
 
@@ -251,14 +243,8 @@ router.post('/editdata/:id', async function (req, res, next) {
 
 
 router.get('/search', function (req, res, next) {
-  res.render('search');
+  res.render('search', {admin: req.user});
 });
-
-
-
-
-
-
 
 
 
@@ -270,33 +256,95 @@ router.get("/logout", isLoggedIn, function (req, res, next) {
 
 
 
-router.get('/about', isLoggedIn, function (req, res, next) {
-  res.render('about');
+router.get('/about', isLoggedIn,  async function (req, res, next) {
+  res.render('about', {admin: req.user});
+
 });
 
 
-router.get('/searchexpenses', isLoggedIn, function (req, res, next) {
-  res.render('searchexpenses');
+router.get('/searchexpenses', isLoggedIn,  async function (req, res, next) {
+   res.render("searchexpenses", {admin: req.user})
 });
 
 
 
 
-router.post('/search', async function (req, res, next) {
+// router.post('/search', async function (req, res, next) {
+//   try {
+//     search = []
+//     const data = await req.user.populate("expensedata")
+//     const user = data.expensedata
+//     user.forEach((e)=>{
+//       if(e.category == req.body.search){
+//         search.push(e)
+//       }
+//     })
+//     res.render("search" , {search})
+
+//   } catch (err) {
+//     res.send(err)
+//   }
+// });
+
+
+router.get('/filter',  async function (req, res, next) {
+try{
+  let{expensedata} = await req.user.populate("expensedata")
+  expensedata = expensedata.filter((e)=> e[req.query.key] == req.query.value)
+  res.render("search", {admin: req.user, expensedata})
+
+}catch(err){
+  res.send(err)
+}
+});
+
+
+
+router.get('/profile/:id', isLoggedIn,  async function (req, res, next) {
+  
   try {
-    search = []
-    const data = await req.user.populate("expensedata")
-    const user = data.expensedata
-    user.forEach((e)=>{
-      if(e.category == req.body.search){
-        search.push(e)
-      }
-    })
-    res.render("search" , {search})
-
-  } catch (err) {
-    res.send(err)
+    const user = await Data.findById(req.params.id)
+    console.log(user)
+    res.render("profile", {user, admin: req.user})
+  } catch (error) {
+    res.send(error)
   }
 });
+
+
+// router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
+  
+//   try {
+//      const del = await Data.findByIdAndDelete(req.params.id)
+//      const allexp = await expensedata.find()
+//      allexp.forEach(async(u) => {{
+//       if(u.user == del._id){
+//         await expensedata.findByIdAndDelete(u._id)
+//       }
+//       res.redirect("/login", {admin: req.user})
+
+//      }})
+//   } catch (error) {
+//     res.send(error)
+//   }
+// });
+
+
+router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
+  
+  try {
+     const del = await Data.findByIdAndDelete(req.params.id)
+     const allexp = expensedata.find((u)=>
+     u._id == del._id
+     )
+      req. user.expensedata.findByIdAndDelete(allexp)
+      await req.user. save()
+      res.redirect("/login", {admin: req.user})
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+
 
 module.exports = router;

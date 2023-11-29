@@ -1,14 +1,13 @@
 
-<%- include("partials/nav2")%>
+<%- include("partials/nav1")%>
 <%- include("partials/header")%>
 
 
 <link rel="stylesheet" href="/stylesheets/searchpg.css">
 
 <div class="pg1">
-
-    <% search.forEach((s)=>{ %>
-
+<div class="cardbox">
+    <% expensedata.forEach((s)=>{ %>
 
         <div class="card1">
     
@@ -20,8 +19,13 @@
           <a href="/editdata/<%= s._id%>" class="editbtn">Edit</a>
              <a href="/delete/<%= s._id%>" class="deletebtn">Delete</a>
          </div>
-
     <%})%>
+
+</div>
+
+
+       
+
 
 
     <%- include("partials/footer")%>
