@@ -11,12 +11,28 @@
 <input type="text" name="Expensename" value="<%= edit.Expensename%>">
 <h4>Amount:</h4>
 <input type="number" name="amount" value="<%= edit.amount%>">
-<h4>Date:</h4>
-<input type="datetime" name="date" value="<%= edit.date%>">
-<h4>Month:</h4>
-<input type="text" name="month" value="<%= edit.month%>">
+
 <h4>Category:</h4>
-<input type="text" name="category" value="<%= edit.category%>">
+<select name="category">
+    <option value=""> Choose Category</option>
+    <option value="Food">Food</option>
+    <option value="Grocery">Grocery</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Travel">Travel</option>
+    <option value="Medical">Medical</option>
+    <option value="Education">Education</option>
+    <option value="Household">Household</option>
+    <option value="Rent & Taxes">Rent & Taxes</option>
+    <option value="Other">Other</option>
+
+</select>
+<h4>Payment Mode:</h4>
+<select name="paymentmode">
+    <option value="">Choose Paymentmode</option>
+    <option value="cash">Cash</option>
+    <option value="online">Online</option>
+    <option value="cheque">Cheque</option>
+</select>
 
 <button> CONFIRM EDIT</button>
     </form>

@@ -7,6 +7,8 @@ const userdata = new mongoose.Schema({
     number: Number,
     address: String,
     location: String,
+    userimage: String,
+    gender: String,
     forgotpasswordOtp :{
         type: Number,
         default: -1

@@ -21,11 +21,12 @@ justify-content: center;
 form >h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2vmax;
+    margin-bottom: 1vmax;
 
 }
 
 form{
-    height: 95vh;
+    height: 85vh;
     width: 40vw;
     background-color: white;
     border-radius: 1vmax;
@@ -38,7 +39,7 @@ form{
 
 
 input{
-    height: 20vh;
+    height: 23vh;
     width: 25vw;
 border-radius: 0.5vmax;
 border: 1px solid grey;
@@ -47,6 +48,17 @@ outline: none;
 padding: 0 2vmax;
 font-size: 1.3vmax;
 }
+select{
+    height: 23vh;
+    width: 25vw;
+border-radius: 0.5vmax;
+border: 1px solid grey;
+margin: 1vmax;
+outline: none;
+padding: 0 2vmax;
+font-size: 1.3vmax;
+}
+
 form >h4{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3vmax;

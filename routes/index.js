@@ -6,6 +6,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 passport.use(new LocalStrategy(Data.authenticate()));
 var nodemailer = require("nodemailer")
+var multer = require("../utils/multer").single("userimage")
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
@@ -20,9 +21,11 @@ router.get('/register', function (req, res, next) {
 
 
 router.post('/register', async function (req, res, next) {
-
+  // multer(req, res, async function (err){
+  //   if (err) throw err
+  // })
   try {
-    await Data.register({ username: req.body.username, email: req.body.email }, req.body.password)
+    await Data.register({ username: req.body.username, email: req.body.email, gender: req.body.gender, number: req.body.number, address: req.body.address, location: req.body.location}, req.body.password)
     res.redirect("/login")
   } catch (err) {
     res.send(err)
@@ -230,7 +233,6 @@ router.get('/editdata/:id', async function (req, res, next) {
   }
 });
 
-
 router.post('/editdata/:id', async function (req, res, next) {
   try {
     await expensedata.findByIdAndUpdate(req.params.id, req.body)
@@ -305,45 +307,30 @@ router.get('/profile/:id', isLoggedIn,  async function (req, res, next) {
   try {
     const user = await Data.findById(req.params.id)
     console.log(user)
-    res.render("profile", {user, admin: req.user})
+    res.render("profile", {user, admin: req.user })
   } catch (error) {
     res.send(error)
   }
 });
-
-
-// router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
-  
-//   try {
-//      const del = await Data.findByIdAndDelete(req.params.id)
-//      const allexp = await expensedata.find()
-//      allexp.forEach(async(u) => {{
-//       if(u.user == del._id){
-//         await expensedata.findByIdAndDelete(u._id)
-//       }
-//       res.redirect("/login", {admin: req.user})
-
-//      }})
-//   } catch (error) {
-//     res.send(error)
-//   }
-// });
 
 
 router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
   
   try {
      const del = await Data.findByIdAndDelete(req.params.id)
-     const allexp = expensedata.find((u)=>
-     u._id == del._id
-     )
-      req. user.expensedata.findByIdAndDelete(allexp)
-      await req.user. save()
+     const allexp = await expensedata.find(req.params.id)
+     allexp.forEach((u) => {{
+      if(u.user == del._id){
+         expensedata.findByIdAndDelete(u._id)
+      }
       res.redirect("/login", {admin: req.user})
+
+     }})
   } catch (error) {
     res.send(error)
   }
 });
+
 
 
 

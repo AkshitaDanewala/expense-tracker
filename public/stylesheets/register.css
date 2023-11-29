@@ -21,25 +21,23 @@ html, body{
 }
 
 form{
-    height: 70vh;
-    width: 30vw;
+    height: 78vh;
+    width: 60vw;
     background-color: white;
     border-radius: 1vmax;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+   padding: 1vmax 4vmax;
 
 }
 
 form >h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vmax;
-    margin-bottom: 1vmax;
+    font-size:2vmax;
+    margin-top: 1vmax;
+    text-align: center;
     }
 input{
-    height: 8vh;
-    width: 20vw;
+    height: 7vh;
+    width: 23vw;
     border: 1px solid grey;
     border-radius: 0.5vmax;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,12 +55,15 @@ form >button{
     font-weight: bold;
     border-radius: 0.5vmax;
     margin-top: 1vmax;
+    margin-left: 21vmax;
     border: none;
     font-size: 1.4vmax;
 }
 form h2{
     margin-top: 1vmax;
+    font-size: 1.4vmax;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 form a{
@@ -71,7 +72,11 @@ form a{
     margin-top: 1vmax;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin-left: 21vmax;
+
 }
+
+
 
 @media(max-width: 600px){
     form{

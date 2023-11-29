@@ -24,7 +24,7 @@ form >h1{
 }
 
 form{
-    height: 95vh;
+    height: 85vh;
     width: 40vw;
     background-color: white;
     border-radius: 1vmax;
@@ -42,6 +42,16 @@ form >h1{
 
 }
 input{
+    height: 15vh;
+    width: 25vw;
+border-radius: 0.5vmax;
+border: 1px solid grey;
+margin: 1vmax;
+outline: none;
+padding: 0 2vmax;
+font-size: 1.3vmax;
+}
+select{
     height: 15vh;
     width: 25vw;
 border-radius: 0.5vmax;

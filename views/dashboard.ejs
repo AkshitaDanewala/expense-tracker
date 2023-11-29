@@ -31,10 +31,9 @@
     
             <h3><span>Name:</span> &nbsp;  &nbsp;<%= user.Expensename%></h3>
             <h3> <span>Amount:</span>  &nbsp;  &nbsp;<%= user.amount%></h3> 
-          <h3><span>Date:</span>  &nbsp;  &nbsp;<%= user.date%>   </h3>
           <h3><span> Category: </span>  &nbsp;  &nbsp;<%= user.category%></h3>
-          <h3><span> Month: </span>  &nbsp;  &nbsp;<%= user.month%></h3>
-          <h3><span>paymentmode:</span> &nbsp;  &nbsp; <%= user.paymentmode%></h3>
+          <h3><span>Paymentmode:</span> &nbsp;  &nbsp; <%= user.paymentmode%></h3>
+          <h5><span class="create">Created At:</span>  &nbsp;  &nbsp; <%= user.createdAt%></h5>
           <a href="/editdata/<%= user._id%>" class="editbtn">Edit</a>
              <a href="/delete/<%= user._id%>" class="deletebtn">Delete</a>
          </div>

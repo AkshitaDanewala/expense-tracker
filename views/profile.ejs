@@ -1,7 +1,7 @@
 <%- include("partials/header")%>
 <!-- <%#- include("partials/nav2")%> -->
 
-
+ <img src="/uploads/<%= user.userimage%>" alt="">
 <%= user.username%> <br><br>
 <%= user.email%> <br><br>
 <a href="/login">logout</a> <br> <br>
@@ -11,3 +11,21 @@
 
 
 <%- include("partials/footer")%>
+
+
+<!--# // router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
+  
+    //   try {
+    //      const del = await Data.findByIdAndDelete(req.params.id)
+    //      const allexp = expensedata.find((u)=>
+    //      u.user == del._id
+    //      )
+    //       req. user.expensedata.findByIdAndDelete(allexp)
+    //       await req.user. save()
+    //       res.redirect("/login", {admin: req.user, allexp})
+    //   } catch (error) {
+    //     res.send(error)
+    //   }
+    // });
+     -->
+    
