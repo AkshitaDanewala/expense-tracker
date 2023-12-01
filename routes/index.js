@@ -6,7 +6,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 passport.use(new LocalStrategy(Data.authenticate()));
 var nodemailer = require("nodemailer")
-var multer = require("../utils/multer").single("userimage")
+const multer = require("../utils/multer").single("userimage")
+
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
@@ -21,16 +22,19 @@ router.get('/register', function (req, res, next) {
 
 
 router.post('/register', async function (req, res, next) {
-  // multer(req, res, async function (err){
-  //   if (err) throw err
-  // })
-  try {
-    await Data.register({ username: req.body.username, email: req.body.email, gender: req.body.gender, number: req.body.number, address: req.body.address, location: req.body.location}, req.body.password)
-    res.redirect("/login")
-  } catch (err) {
-    res.send(err)
-  }
+multer(req, res,async  function(err){
+if (err) throw err;
 
+try {
+  await Data.register({ username: req.body.username, email: req.body.email, gender: req.body.gender, userimage: req.file.filename, number: req.body.number, address: req.body.address, location: req.body.location}, req.body.password)
+  res.redirect("/login")
+} catch (err) {
+  console.log(err)
+  res.send(err)
+}
+
+})
+ 
 });
 
 
@@ -108,7 +112,7 @@ function sendMail(req, res, user) {
     console.log(info);
     user.forgotpasswordOtp = otp;
     user.save()
-    res.render("otp", { email: user.email })
+    res.render("otp", { email: user.email , admin: req.user})
     // return res.send(
     //   "<h1 style='text-align:center;color: tomato; margin-top:10%'><span style='font-size:60px;'>✔️</span> <br />Email Sent! Check your inbox , <br/>check spam in case not found in inbox.</h1>"
     // );
@@ -127,7 +131,7 @@ router.post('/matchOtp/:email', async function (req, res, next) {
     if (matchotp.forgotpasswordOtp == req.body.otp) {
       matchotp.forgotpasswordOtp = -1
       await matchotp.save()
-      res.render("resetpassword", { id: matchotp._id })
+      res.render("resetpassword", { id: matchotp._id , admin: req.user})
     } else {
       res.send("Invalid OTP, Try Again <a href='/forgot'>Forgot Password</a>")
     }
@@ -306,7 +310,7 @@ router.get('/profile/:id', isLoggedIn,  async function (req, res, next) {
   
   try {
     const user = await Data.findById(req.params.id)
-    console.log(user)
+    // console.log(user)
     res.render("profile", {user, admin: req.user })
   } catch (error) {
     res.send(error)
@@ -315,20 +319,18 @@ router.get('/profile/:id', isLoggedIn,  async function (req, res, next) {
 
 
 router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
-  
-  try {
-     const del = await Data.findByIdAndDelete(req.params.id)
-     const allexp = await expensedata.find(req.params.id)
-     allexp.forEach((u) => {{
-      if(u.user == del._id){
-         expensedata.findByIdAndDelete(u._id)
-      }
-      res.redirect("/login", {admin: req.user})
 
-     }})
+  try {
+    const del = await Data.findByIdAndDelete(req.params.id)
+    del.expensedata.forEach( async(e)=>{
+      await expensedata.findByIdAndDelete(e)
+    })
+    res.redirect("/login")
   } catch (error) {
+    console.log(error)
     res.send(error)
   }
+
 });
 
 

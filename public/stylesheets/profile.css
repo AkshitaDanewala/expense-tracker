@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.infobox{
+    height: 90vh;
+    width: 30vw;
+    background-color: lightblue;
+
+}
+img{
+    height: 30vh;
+    width: 15vw;
+    border-radius: 50vmax;
+display: block;
+margin: auto;
+
+}

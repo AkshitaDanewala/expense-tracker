@@ -86,16 +86,24 @@ ul a{
     font-weight: bold;
 }
 .menubox{
-    height: 7vh;
-    width: 13vw;
+    height: 11vh;
+    width: 10vw;
     /* border: 2px solid black; */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .menu{
     display: none;
+}
+img{
+    height: 8vh;
+width: 4vw;
+border-radius: 5vmax;
+object-fit: cover;
+object-position: top;
+
 }
 
 @media(max-width: 600px){
@@ -189,8 +197,8 @@ ul{
                     <a href="/login">Login</a>
 
                <% }else{%>
-                    <a href="/profile/<%= admin._id%>">Profile</a>
-                    <h2><i class="ri-menu-line menu"></i></h2>
+                <h2><i class="ri-menu-line menu"></i></h2>
+                    <a href="/profile/<%= admin._id%>" > <img src="/uploads/<%= admin.userimage%>" alt=""></a>
                 <%}%>
  
     

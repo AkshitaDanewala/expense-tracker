@@ -1,31 +1,26 @@
 <%- include("partials/header")%>
-<!-- <%#- include("partials/nav2")%> -->
+<link rel="stylesheet" href="/stylesheets/profile.css">
 
- <img src="/uploads/<%= user.userimage%>" alt="">
-<%= user.username%> <br><br>
-<%= user.email%> <br><br>
-<a href="/login">logout</a> <br> <br>
-<a href="/changepassword" class="changebtn">Change Password</a> <br> <br>
-<a href="/update">update Account</a> <br> <br>
-<a href="/deleteuser/<%= admin._id%>">DeleteAccount</a> <br>
+<div class="infobox">
+    <img src="/uploads/<%= user.userimage%>" alt="">
+   <span class="nametag">Name:</span>  <span><%= user.username%></span> <br> <br>
+   <span class="emailtag">Email:</span>  <span><%= user.email%></span> <br> <br>
+   <span class="gendertag">Gender:</span>  <span><%= user.gender%></span> <br> <br>
+   <span class="numbertag">Contact:</span>  <span><%= user.number%></span> <br> <br>
+   <span class="addresstag">Address:</span>  <span><%= user.address%></span> <br> <br>
+   <span class="locationtag">Location:</span>  <span><%= user.location%></span> <br> <br>
+
+    <a href="/login">logout</a> <br> <br>
+    <a href="/changepassword" class="changebtn">Change Password</a> <br> <br>
+    <a href="/update">update Account</a> <br> <br>
+    <a href="/deleteuser/<%= user._id%>">DeleteAccount</a> <br>
+    
+</div>
 
 
 <%- include("partials/footer")%>
 
 
-<!--# // router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
-  
-    //   try {
-    //      const del = await Data.findByIdAndDelete(req.params.id)
-    //      const allexp = expensedata.find((u)=>
-    //      u.user == del._id
-    //      )
-    //       req. user.expensedata.findByIdAndDelete(allexp)
-    //       await req.user. save()
-    //       res.redirect("/login", {admin: req.user, allexp})
-    //   } catch (error) {
-    //     res.send(error)
-    //   }
-    // });
-     -->
+
+    
     
