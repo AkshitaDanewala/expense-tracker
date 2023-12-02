@@ -335,5 +335,22 @@ router.get('/deleteuser/:id', isLoggedIn,  async function (req, res, next) {
 
 
 
+router.get('/updateuser/:id', isLoggedIn,  async function (req, res, next) {
+
+  res.render("updateuser", {admin: req.user  })
+ 
+});
+
+
+router.post('/updateuser/:id', isLoggedIn, async function (req, res, next) {
+  try{
+    let newdata = await  Data.findByIdAndUpdate(req.params.id, req.body)
+    await newdata.save()
+    res.redirect("/dashboard")
+  }catch(err){
+    res.send(err)
+  }
+});
+
 
 module.exports = router;

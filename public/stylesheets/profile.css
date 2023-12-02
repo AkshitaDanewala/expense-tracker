@@ -14,10 +14,11 @@ justify-content: center;
 
 
 .infobox{
-    height: 90vh;
-    width: 30vw;
+    height: 93vh;
+    width: 35vw;
     background-color: lightblue;
-
+padding: 2vmax 3vmax;
+position: relative;
 }
 img{
     height: 30vh;
@@ -26,4 +27,39 @@ img{
 display: block;
 margin: auto;
 
+}
+.nametag, .emailtag, .gendertag, .numbertag, .addresstag, .locationtag{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.emailtag, .numbertag{
+    margin-left: 2vmax;
+}
+
+ .numbertag{
+    margin-left: 3.5vmax;
+}
+
+.btnbox{
+   height: 20vh;
+   width: 20vw;
+   background-color: white;
+   border-radius: 1vmax;
+   position: absolute;
+left:-50%;
+
+}
+
+.logoutbtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6vmax;
+    text-decoration: none;
+
+}
+
+.settingbtn{
+    font-size: 2vmax;
+    position: absolute;
+    top: 4%;
+    right: 5%;
 }

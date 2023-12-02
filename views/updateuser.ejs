@@ -1,0 +1,27 @@
+
+
+
+<%- include("partials/header")%>
+
+
+
+<link rel="stylesheet" href="/stylesheets/register.css">
+
+<div class="registerpg">
+    <form action="/updateuser/<%= admin._id%>" method="post" enctype="multipart/form-data">
+    <h1>Update Your Account</h1>
+        <input type="text" name="username" placeholder="Username" value="<%= admin.username%>">
+        <input type="email" name="email" placeholder="Email" value="<%= admin.email%>" >
+        <input type="file"  name="userimage"  value="<%= admin.userimage%>">
+        <input type="text" name="gender" placeholder="Gender" value="<%= admin.gender%>">
+        <input type="number" name="number" placeholder="Contact" value="<%= admin.number%>">
+        <input type="text" name="address" placeholder="Address" value="<%=admin.address%>">
+        <input type="text" name="location" placeholder="Location" value="<%= admin.location%>">    
+<button>Update</button>
+<h2>OR</h2>
+<a href="/profile">Back</a>
+    </form> 
+
+</div>
+
+<%- include("partials/footer")%>
