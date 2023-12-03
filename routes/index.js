@@ -7,7 +7,7 @@ const LocalStrategy = require("passport-local");
 passport.use(new LocalStrategy(Data.authenticate()));
 var nodemailer = require("nodemailer")
 const multer = require("../utils/multer").single("userimage")
-const authentication = require("../authentication.js")
+const email = require("../authentication.js")
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
@@ -89,8 +89,8 @@ function sendMail(req, res, user) {
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-      user: authentication.gmail,
-      pass: authentication.pass,
+      user: email.gmail,
+      pass: email.pass,
     },
     tls: {
       // do not fail on invalid certs
