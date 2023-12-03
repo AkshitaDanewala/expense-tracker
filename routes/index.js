@@ -7,7 +7,7 @@ const LocalStrategy = require("passport-local");
 passport.use(new LocalStrategy(Data.authenticate()));
 var nodemailer = require("nodemailer")
 const multer = require("../utils/multer").single("userimage")
-const email = require("../authentication.js")
+const email = require("../authenticationhide.js")
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
