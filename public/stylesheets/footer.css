@@ -19,6 +19,8 @@ html,body{
 .p9>.p9-content1{
     width: 20%;
     font-family: Arial, Helvetica, sans-serif;
+    /* border: 2px solid black; */
+
 }
 .p9>.p9-content{
     padding-right: 5%;
@@ -57,4 +59,31 @@ html,body{
 }
 .filler{
     width: 40%;
+}
+
+@media(max-width: 600px){
+    .p9>.p9-content1{
+        width: 26vw;
+        font-family: Arial, Helvetica, sans-serif;
+        /* border: 2px solid black; */
+        font-size: 1.8vmax;
+    }
+    .p9>.p9-content{
+        padding-right: 5%;
+        /* border: 2px solid black; */
+        width: 18vw;
+    
+    }
+
+    .p9>.p9-content >h4{
+        padding-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .p9>.p9-content>h5{
+        padding-bottom: 10%;
+        color: rgb(44, 44, 44);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3vmax;
+
+    }
 }

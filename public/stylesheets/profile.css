@@ -14,7 +14,7 @@ justify-content: center;
 
 
 .infobox{
-    height: 80vh;
+    height: 87vh;
     width: 35vw;
     background-color: lightblue;
 padding: 2vmax 3vmax;
@@ -32,14 +32,9 @@ img{
     font-weight: bold;
     font-size: 1.3vmax;
 }
-.emailtag, .numbertag{
-    margin-left: 2vmax;
-}
 
- .numbertag{
-    margin-left: 3.5vmax;
-}
 
+ 
 .btnbox{
    height: 20vh;
    width: 15vw;
@@ -89,4 +84,43 @@ border-radius: 0.5vmax;
 }
 .names{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(max-width: 600px){
+    .infobox{
+        height: 50vh;
+        width: 90vw;
+    }
+
+    img{
+        height: 13vh;
+        border: 2px solid black;
+        width: 27vw;
+    
+    }
+    .nametag, .emailtag, .gendertag, .numbertag, .addresstag, .locationtag{
+        font-size: 1.8vmax;
+    }
+    .settingbtn{
+        font-size: 3vmax;
+        position: absolute;
+        top: 25%;
+        right: 16%;
+    }
+
+    .btnbox{
+        height: 15vh;
+        width: 35vw;
+        border-radius: 1vmax;
+        background-color: white;
+        position: absolute;
+     z-index: 99;
+     margin-left: 20vmax;
+     text-align: center;
+     padding-top: 1vmax;
+     margin-top: 10vmax;
+     }
+     .closebtn{
+        font-size: 3vmax;
+    }
 }

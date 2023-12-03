@@ -65,15 +65,27 @@ button{
 }
 
 @media(max-width: 600px){
+
+    form{
+        width: 80vw;
+    }
+    select{
+        width: 42vw;
+        font-size: 2vmax;
+    }
     form input{
         width: 75vw;
-        height: 8vh;
+        height: 7vh;
         font-size: 2vmax;
     }
     .pg1{
         justify-content: start;
 padding-top: 10vmax;
 
+    }
+    button{
+        padding: 1vmax 3vmax;
+        font-size: 2vmax;
     }
 }
 

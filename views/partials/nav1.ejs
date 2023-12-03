@@ -23,11 +23,11 @@ nav{
 }
 
 .fullpg{
-    height: 25vh;
+    height: 28vh;
     width: 50vw;
     background-color:rgb(239, 236, 236);
     position: absolute;
-    top: -50%;
+    top: -55%;
     right: 0%;
     transition: all ease 1s;
     z-index: 999;
@@ -132,6 +132,7 @@ ul{
 }
 .menu{
     display: initial;
+    margin-left: 10vmax;
 }
 
 .loginbtn{
@@ -142,6 +143,9 @@ ul{
 .fullpg >h3 .close{
     font-size: 3vmax;
    
+}
+img{
+    display: none;
 }
 }
 
@@ -160,7 +164,9 @@ ul{
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/Dashboard">Dashboard</a>
-            <a href="/searchexpenses">Expenses</a>
+            <a href="/searchexpenses">Search Expenses</a>
+            <a href="/profile/<%= admin._id%>">Profile</a>
+
         </ul>
         <h3><i class="ri-close-line close"></i></h3>
     </div>
