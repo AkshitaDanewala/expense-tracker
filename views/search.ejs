@@ -13,9 +13,10 @@
     
             <h3><span>Name:</span> &nbsp;  &nbsp;<%= s.Expensename%></h3>
             <h3> <span>Amount:</span>  &nbsp;  &nbsp;<%=s.amount%></h3> 
-          <h3><span>Date:</span>  &nbsp;  &nbsp;<%= s.date%>   </h3>
           <h3><span> Category: </span>  &nbsp;  &nbsp;<%= s.category%></h3>
-          <h3><span> Month: </span>  &nbsp;  &nbsp;<%= s.month%></h3>
+          <h3><span> Paymentmode: </span>  &nbsp;  &nbsp;<%= s.paymentmode%></h3>
+          <h5><span class="create">Created At:</span>  &nbsp;  &nbsp; <%= s.createdAt%></h5>
+
           <a href="/editdata/<%= s._id%>" class="editbtn">Edit</a>
              <a href="/delete/<%= s._id%>" class="deletebtn">Delete</a>
          </div>
@@ -28,7 +29,7 @@
 
 
 
-    <%- include("partials/footer")%>
+    <!-- <%- include("partials/footer")%> -->
 
 
 

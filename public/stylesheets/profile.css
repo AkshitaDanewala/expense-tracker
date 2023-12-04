@@ -25,6 +25,9 @@ img{
     height: 31vh;
     width: 15vw;
     border-radius: 50vmax;
+    object-fit:cover ;
+    object-position: top;
+
 
 }
 .nametag, .emailtag, .gendertag, .numbertag, .addresstag, .locationtag{
@@ -94,7 +97,7 @@ border-radius: 0.5vmax;
 
     img{
         height: 13vh;
-        border: 2px solid black;
+        /* border: 2px solid black; */
         width: 27vw;
     
     }

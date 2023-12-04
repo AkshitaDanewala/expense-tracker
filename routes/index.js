@@ -72,7 +72,7 @@ router.post('/forgot', async function (req, res, next) {
 
     sendMail(req, res, user)
   } catch (err) {
-    console.log(err)
+    // console.log(err)
     res.send(err)
   }
 
@@ -344,7 +344,7 @@ router.get('/updateuser/:id', isLoggedIn,  async function (req, res, next) {
 
 router.post('/updateuser/:id', isLoggedIn, async function (req, res, next) {
   try{
-    let newdata = await  Data.findByIdAndUpdate(req.params.id, { username: req.body.username, email: req.body.email, gender: req.body.gender, userimage: req.body.userimage, number: req.body.number, address: req.body.address, location: req.body.location})
+    let newdata = await  Data.findByIdAndUpdate(req.params.id, { username: req.body.username, email: req.body.email, gender: req.body.gender, number: req.body.number, address: req.body.address, location: req.body.location})
     await newdata.save()
     res.redirect("/dashboard")
   }catch(err){

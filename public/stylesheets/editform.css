@@ -80,7 +80,7 @@ button{
 
 @media(max-width: 600px){
     form{
-        height: 67vh;
+        height: 55vh;
         width: 74vw;
         background-color: white;
     }
@@ -90,6 +90,11 @@ button{
         width: 57vw;
     font-size: 1.7vmax;
 
+    }
+    select{
+        height: 5vh;
+        width: 58vw;
+    font-size: 1.6vmax;
     }
 
     form >h4{

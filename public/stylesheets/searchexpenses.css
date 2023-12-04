@@ -43,6 +43,7 @@ select{
 }
 option{
     background-color: white;
+    color: black;
 }
 
 form input{

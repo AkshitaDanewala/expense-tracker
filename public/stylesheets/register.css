@@ -11,13 +11,16 @@ html, body{
     width: 100%;
 }
 
-.registerpg{
+.registerpg, .updateuserpg{
     height: 100vh;
     width: 100%;
     background-color:rgb(10, 10, 93);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.updateuserpg> form{
+    height: 59vh;
 }
 
 form{
@@ -105,5 +108,12 @@ form a{
         
         form a{
             margin-left: 9vmax;
+        }
+        .updateuserpg{
+            height: 100vh;
+        }
+
+        .updateuserpg >form{
+            height: 60vh;
         }
 }

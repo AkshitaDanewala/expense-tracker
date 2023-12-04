@@ -174,6 +174,7 @@ width: 40vw;
    
     .amtbox{
         height: 5vh;
+        width: 18vw;
     font-size: 2vmax;
     }
 
@@ -186,8 +187,14 @@ width: 40vw;
     }
 
     .editbtn, .deletebtn{
-        font-size: 3vmax;
+        font-size: 2.3vmax;
    margin:  2vmax 3vmax;
 
+    }
+    .create{
+        font-size: 2.3vmax;
+    }
+    .card1 >h5{
+        font-size: 1.4vmax;
     }
 }

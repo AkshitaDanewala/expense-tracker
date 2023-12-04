@@ -83,7 +83,7 @@ button{
 @media(max-width: 600px){
     
     form{
-        height: 65vh;
+        height: 60vh;
         width: 80vw;
     }
     form >h1{
@@ -93,7 +93,17 @@ button{
     input{
         height: 5vh;
         width: 60vw;
-
+font-size: 1.6vmax;
+    }
+    select{
+        height: 5vh;
+        width: 60vw;
+    border-radius: 0.5vmax;
+    border: 1px solid grey;
+    margin: 1vmax;
+    outline: none;
+    padding: 0 2vmax;
+    font-size: 1.6vmax;
     }
 
     form >h4{
