@@ -162,11 +162,23 @@ img{
 
     <div class="fullpg">
  <ul>
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/Dashboard">Dashboard</a>
-            <a href="/searchexpenses">Search Expenses</a>
-            <a href="/profile">Profile</a>
+
+    <% if(!admin){%>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/Dashboard">Dashboard</a>
+        <a href="/searchexpenses">Search Expenses</a>
+        <a href="/login">Profile</a>
+
+    <% }else{ %>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/Dashboard">Dashboard</a>
+        <a href="/searchexpenses">Search Expenses</a>
+        <a href="/profile/<%= admin._id%>">Profile</a>
+    <%}%>
+
+           
 
         </ul>
         <h3><i class="ri-close-line close"></i></h3>
